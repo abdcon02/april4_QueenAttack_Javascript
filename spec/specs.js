@@ -1,18 +1,5 @@
-describe('leapYear', function() {
-    it("is false for a year that is not divisible by 4", function() {
-        expect(leapYear(1999)).to.equal(false);
-    });
-
-
-    it("is true for most years divisible by 4", function() {
-        expect(leapYear(2012)).to.equal(true);
-    });
-
-    it("is false for most years divisible by 100", function() {
-        expect(leapYear(1900)).to.equal(false);
-    });
-
-    it("is true for all years divisble by 400", function() {
-        expect(leapYear(1200)).to.equal(true);
-    });
+describe('queenAttack', function() {
+  it('is false if the coordinates are not horizontally, vertically, or diagonally in line with each other', function() {
+    expect(queenAttack([1, 1], [2, 3])).to.equal(false);
+  });
 });
