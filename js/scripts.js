@@ -1,6 +1,8 @@
 
 var queenAttack = function(x1, y1, x2 ,y2) {
-    if ((x1 === x2) || (y1 === y2) || (x2-x1) === (y2-y1)) {
+    if (x1 === x2 && y1 === y2){
+        return false;
+    } else if ((x1 === x2) || (y1 === y2) || (x2-x1) === (y2-y1)) {
         return true;
     } else {
         return false;
@@ -16,7 +18,9 @@ $(document).ready(function() {
         var result = queenAttack(x1, y1, x2, y2);
 
         $(".result").text("");
-        if (result) {
+        if (x1 === x2 && y1 === y2){
+            $(".result1").text("The queen can attack the selected position BECAUSE YOU SELECTED THE SAME POSITION THAT THE QUEEN IS IN IDIOT!");
+        } else if (result) {
             $(".result1").text("The queen can attack the selected position");
         } else {
             $(".result1").text("The queen cannot attack the selected position");
